@@ -1,0 +1,15 @@
+// Goods
+.goods {
+  &__head {
+    margin-bottom: 24px;
+  }
+}
+
+// Media min
+@media (min-width: $min-md) {
+  .goods {
+    .title {
+      margin-bottom: 48px;
+    }
+  }
+}

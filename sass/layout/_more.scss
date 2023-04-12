@@ -1,0 +1,42 @@
+// More
+.more {
+  margin-top: 48px;
+  a {
+    color: $dark;
+    font-size: $fz-24;
+    font-weight: $semibold;
+    i {
+      top: 2px;
+      margin-left: 20px;
+      position: relative;
+      width: 11px;height: 18px;
+      transition: inherit;
+    }
+    &:hover {
+      color: $orange;
+      i {
+        transform: translateX(4px)
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .more {
+    margin-top: 24px;
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .more {
+    margin-top: 20px;
+    a {
+      font-size: $fz-18;
+      i {
+        top: 1px;
+      }
+    }
+  }
+}

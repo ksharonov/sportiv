@@ -1,0 +1,91 @@
+// Team
+.team {
+  .title {
+    padding-right: 115px;
+  }
+  &__sl {
+    margin-top: -90px;
+    padding-top: 90px;
+    .swiper-button {
+      &-arrow {
+        top: 15px;
+        margin-top: 0;
+      }
+      &-next {
+        right: 12px;
+      }
+      &-prev {
+        left: auto;right: 62px;
+      }
+    }
+  }
+  &__img {
+    height: 348px;
+    display: block;
+  }
+  &__name {
+    color: $orange;
+    margin-top: 24px;
+    font-size: $fz-24;
+    font-weight: $semibold;
+  }
+  &__status {
+    margin-top: 8px;
+    line-height: 1.3;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .team {
+    &__sl {
+      .swiper-button {
+        &-arrow {
+          top: 20px;
+        }
+        &-prev {
+          right: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .team {
+    .title {
+      padding-right: 90px;
+    }
+    &__sl {
+      margin-top: -62px;
+      padding-top: 62px;
+      .swiper-button {
+        &-arrow {
+          top: 11px;
+        }
+        &-prev {
+          right: 45px;
+        }
+      }
+    }
+    &__img {
+      height: 250px;
+    }
+    &__name {
+      margin-top: 8px;
+      font-size: $fz-18;
+    }
+    &__status {
+      margin-top: 4px;
+      font-size: $fz-12;
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .team {
+    &__img {
+      height: 160px;
+    }
+  }
+}

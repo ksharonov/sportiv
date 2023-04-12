@@ -1,0 +1,75 @@
+// Projects
+.projects {
+  &__sl {
+    overflow: initial;
+  }
+  &__item {
+    .paragraph {
+      margin-top: 8px;
+    }
+  }
+  &__img {
+    padding: 20px;
+    height: 160px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__title {
+    margin-top: 24px;
+    font-size: $fz-24;
+    font-weight: $semibold;
+    a {
+      color: inherit;
+    }
+  }
+  &__more {
+    margin-top: 20px;
+    a {
+      color: $orange;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .projects {
+    &__item {
+      width: 460px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .projects {
+    &__item {
+      width: 280px;
+      .paragraph {
+        font-size: $fz-12;
+      }
+    }
+    &__img {
+      height: 100px;
+    }
+    &__title {
+      margin-top: 8px;
+      font-size: $fz-18;
+    }
+    &__more {
+      font-size: 12px;
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .projects {
+    &__item {
+      width: 200px;
+    }
+  }
+}

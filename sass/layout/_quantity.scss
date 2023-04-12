@@ -1,0 +1,40 @@
+// Quantity
+.quantity {
+  position: relative;
+  border: 1px solid $gray;
+  max-width: 90px;width: 100%;
+  input {
+    border: 0;
+    padding: 0 30px;
+    padding-top: 2px;
+    font-size: $fz-18;
+    text-align: center;
+    width: 100%;height: 38px;
+  }
+  span {
+    top: 50%;
+    cursor: pointer;
+    font-size: $fz-18;
+    position: absolute;
+    font-weight: $semibold;
+    transform: translateY(-50%);
+    &:hover {
+      opacity: .4;
+    }
+  }
+  &__down {
+    left: 16px;
+  }
+  &__up {
+    right: 16px;
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .quantity {
+    input {
+      font-size: $fz-16;
+    }
+  }
+}

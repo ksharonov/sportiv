@@ -1,0 +1,15 @@
+// Padding
+.padding {
+  &-section {
+    padding-top: 80px;
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .padding {
+    &-section {
+      padding-top: 64px;
+    }
+  }
+}

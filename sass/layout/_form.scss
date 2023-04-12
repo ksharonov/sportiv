@@ -1,0 +1,92 @@
+// Form
+.form {
+  &__field, &__name, &__field input, &__field textarea {
+    width: 100%;
+    display: block;
+  }
+  &__field {
+    position: relative;
+    margin-bottom: 16px;
+    input, textarea {
+      color: $dark;
+      font-size: $fz-18;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-weight: $medium;
+      border: 1px solid $gray;
+      font-family: $font-primary;
+      box-shadow: none;
+      transition: all .2s;
+      &:focus {
+        border-color: $dark;
+      }
+    }
+    input {
+      height: 55px;
+      line-height: 55px;
+    }
+    textarea {
+      resize: none;
+      height: 170px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    &--icon {
+      &:after {
+        @include pseudo-elements;
+        position: absolute;
+        width: 24px;height: 24px;
+        top: calc(50% + 14px);right: 16px;
+        transform: translateY(-50%);
+      }
+      input {
+        padding-right: 50px;
+      }
+    }
+    &--check:after {
+      background: url(../img/svg/i-check-green.svg) center/contain no-repeat;
+    }
+  }
+  &__name {
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .form {
+    &__field {
+      margin-bottom: 8px;
+      input, textarea {
+        font-size: $fz-12;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      input {
+        height: 34px;
+        line-height: 34px;
+      }
+      textarea {
+        height: 124px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      &--icon {
+        &:after {
+          right: 8px;
+          top: calc(50% + 10px);
+          width: 18px;height: 18px;
+        }
+        input {
+          padding-right: 30px;
+        }
+      }
+    }
+    &__name {
+      font-size: $fz-12;
+      margin-bottom: 4px;
+    }
+  }
+}

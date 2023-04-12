@@ -1,0 +1,76 @@
+// Addresses
+.addresses {
+  &__item {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid $grayLight;
+    .check__item {
+      padding-right: 50px;
+      margin-bottom: 0 !important;
+    }
+    .check__mark {
+      top: 4px;
+    }
+    .check__txt {
+      line-height: 1.3;
+      font-size: $fz-18;
+    }
+  }
+  &__panel {
+    color: $gray;
+    margin-top: 8px;
+    line-height: 1.3;
+    margin-left: 40px;
+    span {
+      margin-right: 16px;
+    }
+  }
+  &__edit {
+    color: $orange;
+    font-family: $font-primary;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__del {
+    position: absolute;
+    top: -1px;right: 0;
+    width: 24px;height: 24px;
+  }
+  &-btn {
+    .btn {
+      width: auto;
+    }
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .addresses {
+    &__item {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      .check__item {
+        padding-right: 40px;
+      }
+      .check__mark {
+        top: 0;
+        margin-right: 16px;
+      }
+      .check__txt {
+        font-size: $fz-14;
+      }
+    }
+    &__panel {
+      font-size: $fz-12;
+      margin-left: 32px;
+    }
+    &__del {
+      top: -3px;
+    }
+    &-btn {
+      margin-top: 24px;
+    }
+  }
+}

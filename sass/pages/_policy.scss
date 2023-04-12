@@ -1,0 +1,42 @@
+// Policy
+.policy {
+  .title {
+    margin-bottom: 0;
+  }
+  .paragraph {
+    max-width: 894px;width: 100%;
+    h2 {
+      color: $orange;
+      margin-top: 48px;
+      font-size: $fz-24;
+    }
+    p {
+      margin-top: 24px;
+      margin-bottom: 0 !important;
+    }
+    ul {
+      li {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .policy {
+    .paragraph {
+      font-size: $fz-12;
+      h2 {
+        font-size: $fz-18;
+        margin-top: 32px;
+      }
+      p {
+        margin-top: 16px;
+      }
+    }
+  }
+}

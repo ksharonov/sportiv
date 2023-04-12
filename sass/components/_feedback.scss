@@ -1,0 +1,28 @@
+// Feedback
+.feedback {
+  padding-top: 40px;
+  &__form {
+    max-width: 792px;width: 100%;
+    .check {
+      margin-top: 24px;
+    }
+    .btn {
+      width: auto;
+      margin-top: 32px;
+    }
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .feedback {
+    &__form {
+      .check__mark {
+        top: 0;
+      }
+      .check__txt {
+        font-size: $fz-12;
+      }
+    }
+  }
+}

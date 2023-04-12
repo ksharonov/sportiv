@@ -1,0 +1,17 @@
+// Sorting
+.sorting {
+  &__title {
+    font-size: $fz-18;
+    margin-right: 16px;
+    font-weight: $semibold;
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .sorting {
+    &__title {
+      display: none;
+    }
+  }
+}

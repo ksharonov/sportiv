@@ -1,0 +1,27 @@
+// Pagination
+.pagination {
+  margin-top: 56px;
+  &__link {
+    color: $dark;
+    font-size: $fz-18;
+    font-weight: $semibold;
+    width: 38px;height: 38px;
+    border: 1px solid transparent;
+    svg {
+      width: 32px;height: 32px;
+      path {
+        transition: all .2s;
+      }
+    }
+    &:hover {
+      color: $white;
+      background: $orange;
+      svg path {
+        stroke: $white;
+      }
+    }
+    &--active {
+      border-color: $orange;
+    }
+  }
+}

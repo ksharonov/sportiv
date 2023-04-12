@@ -1,0 +1,98 @@
+// Events
+.events {
+  &__box {
+    padding: 40px;
+  }
+  .title {
+    padding-right: 115px;
+  }
+  &__sl {
+    margin-top: -90px;
+    padding-top: 90px;
+    .swiper-button-arrow {
+      top: 11px;
+      margin-top: 0;
+    }
+    .swiper-button-next {
+      right: 12px;
+    }
+    .swiper-button-prev {
+      left: auto;right: 62px;
+    }
+  }
+  &__item {
+    font-size: $fz-18;
+    line-height: 1.3;
+  }
+  &__date {
+    font-size: $fz-24;
+    line-height: 1.2;
+    font-weight: $semibold;
+  }
+  &__name {
+    margin-top: 16px;
+  }
+  &__txt {
+    color: $gray;
+    margin-top: 4px;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__img {
+    height: 230px;
+    display: block;
+    margin-top: 16px;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .events {
+    &__sl {
+      margin-top: -133px;
+      padding-top: 133px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .events {
+    &__box {
+      padding: 24px;
+    }
+    .title {
+      padding-right: 0;
+    }
+    &__sl {
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 56px;
+      .swiper-button-arrow {
+        top: auto;
+        bottom: 0;
+        svg path {
+          stroke: $orange;
+        }
+      }
+      .swiper-button-prev {
+        right: 45px;
+      }
+    }
+    &__item {
+      font-size: $fz-14;
+    }
+    &__date {
+      font-size: $fz-18;
+    }
+    &__name {
+      margin-top: 8px;
+    }
+    &__img {
+      height: 264px;
+      margin-top: 8px;
+    }
+  }
+}

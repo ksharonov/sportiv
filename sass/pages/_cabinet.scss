@@ -1,0 +1,145 @@
+// Сabinet
+.cabinet {
+  .title {
+    margin-bottom: 48px;
+  }
+  &__nav {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+      a {
+        color: $dark;
+        font-size: $fz-18;
+        font-weight: $semibold;
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 16px;
+          width: 24px;height: 24px;
+          flex-shrink: 0;
+          transition: inherit;
+          path {
+            transition: inherit;
+          }
+        }
+      }
+      &.active a,
+      a:hover {
+        color: $orange;
+        svg path {
+          stroke: $orange;
+        }
+      }
+      hr {
+        border: 0;
+        margin: 0;
+        height: 2px;
+        background: $grayLight;
+      }
+    }
+  }
+  &__title {
+    font-size: $fz-24;
+    margin-bottom: 32px;
+    font-weight: $semibold;
+    &--link {
+      a {
+        color: inherit;
+        position: relative;
+        pointer-events: none;
+        &:before {
+          display: none;
+          top: 50%;left: 0;
+          @include pseudo-elements;
+          width: 32px;height: 32px;
+          background: url(../img/svg/i-arrow-left.svg) center/contain no-repeat;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  &__inner {
+    max-width: 588px;width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 2px solid $grayLight;
+    }
+  }
+  &__form {
+    .btn {
+      width: auto;
+      margin-top: 20px;
+    }
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .cabinet {
+    padding-top: 26px;
+    &__nav {
+      li {
+        margin-bottom: 0 !important;
+        border-top: 2px solid $grayLight;
+        &:last-child {
+          border-bottom: 2px solid $grayLight;
+        }
+        hr {
+          display: none;
+        }
+        a {
+          padding: 24px 0;
+        }
+      }
+    }
+    &__title {
+      &--link {
+        a {
+          padding-left: 56px;
+          &:before {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .cabinet {
+    padding-top: 0;
+    .title {
+      margin-bottom: 32px;
+    }
+    &__nav {
+      li {
+        a {
+          padding: 16px 0;
+        }
+      }
+    }
+    &__title {
+      font-size: $fz-18;
+      &--link {
+        a {
+          padding-left: 40px;
+          &:before {
+            width: 24px;height: 24px;
+          }
+        }
+      }
+    }
+    &__inner {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+    &__form {
+      .btn {
+        margin-top: 16px;
+      }
+    }
+  }
+}

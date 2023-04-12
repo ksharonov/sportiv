@@ -1,0 +1,15 @@
+// Search
+.p-search {
+  &__row {
+    margin-top: 55px;
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .p-search {
+    &__row {
+      margin-top: 24px;
+    }
+  }
+}

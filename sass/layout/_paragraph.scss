@@ -1,0 +1,21 @@
+// Paragraph
+.paragraph {
+  line-height: 1.4;
+  p+p {
+    margin-top: 20px;
+  }
+  ul {
+    margin-bottom: 20px;
+    li {
+      position: relative;
+      padding-left: 28px;
+      &:before {
+        @include pseudo-elements;
+        background: $dark;
+        border-radius: 50%;
+        top: 9px;left: 10px;
+        width: 3px;height: 3px;
+      }
+    }
+  }
+}

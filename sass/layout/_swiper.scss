@@ -1,0 +1,65 @@
+// Swiper
+.swiper {
+  &-button {
+    &-arrow {
+      width: 21px;height: 36px;
+      &:after {
+        display: none;
+      }
+      &:hover {
+        opacity: .6;
+      }
+      svg {
+        display: block;
+        width: 100%;height: 100%;
+      }
+    }
+  }
+  &-pagination  {
+    &-bullet {
+      border-radius: 0;
+      background: $white;
+      width: 8px;height: 8px;
+      opacity: .5 !important;
+      transition: all .2s;
+      &-active {
+        opacity: 1 !important;
+      }
+    }
+  }
+  &-orange {
+    .swiper-button-arrow {
+      svg path {
+        stroke: $orange;
+      }
+    }
+  }
+  &-dark {
+    .swiper-button-arrow {
+      svg path {
+        stroke: $dark;
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .swiper {
+    &-button {
+      &-arrow {
+        width: 16px;height: 27px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .swiper {
+    &-button {
+      &-arrow {
+        width: 12px;height: 21px;
+      }
+    }
+  }
+}

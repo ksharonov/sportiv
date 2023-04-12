@@ -1,0 +1,17 @@
+// Title
+.title {
+  margin-bottom: 32px;
+  h1, h2, &__h1, &__h2 {
+    line-height: 1.1;
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .title {
+    margin-bottom: 24px;
+    h1, h2, &__h1, &__h2 {
+      font-size: 32px;
+    }
+  }
+}

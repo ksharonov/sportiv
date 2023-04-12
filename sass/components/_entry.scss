@@ -1,0 +1,35 @@
+// Entry
+.entry {
+  margin-top: 48px;
+  p {
+    color: $black;
+    font-size: $fz-24;
+    margin-bottom: 24px;
+    font-weight: $semibold;
+  }
+  &__item {
+    width: 56px;height: 56px;
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .entry {
+    margin-top: 24px;
+    p {
+      font-size: $fz-18;
+      margin-bottom: 16px;
+    }
+    &__item {
+      width: 48px;height: 48px;
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,222 @@
+// Filter
+.filter {
+  &__close {
+    display: block;
+    margin-bottom: 48px;
+    width: 36px;height: 36px;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  &__title {
+    font-size: $fz-32;
+    line-height: 1.1;
+    font-weight: $bold;
+    margin-bottom: 32px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    &--open {
+      .filter__head {
+        &:after {
+          margin-top: -11px;
+          transform: rotate(180deg) translateY(-50%);
+        }
+      }
+    }
+  }
+  &__head {
+    cursor: pointer;
+    font-size: $fz-18;
+    font-weight: $semibold;
+    position: relative;
+    margin-bottom: 16px;
+    padding-right: 35px;
+    &:after {
+      top: 50%;right: 5px;
+      @include pseudo-elements;
+      width: 17px;height: 11px;
+      background: url(../img/svg/i-arrow-down.svg) center/contain no-repeat;
+      transform: translateY(-50%);
+      transition: all .2s;
+    }
+  }
+  &__clear {
+    margin-top: 48px;
+    button {
+      font-size: $fz-16;
+      line-height: 1.3;
+      font-weight: $medium;
+      font-family: $font-primary;
+      text-decoration-line: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &-open {
+    font-size: $fz-18;
+    font-weight: $semibold;
+    i {
+      margin-right: 16px;
+      width: 40px;height: 40px;
+    }
+  }
+}
+
+// Category
+.category {
+  &__item {
+    cursor: pointer;
+    line-height: 1.3;
+    transition: all .2s;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    span {
+      color: $gray;
+    }
+    &--active,
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+// Bloom
+.bloom {
+  gap: 16px;
+  &__item {
+    cursor: pointer;
+    position: relative;
+    width: 40px;height: 40px;
+    &:before {
+      opacity: 0;
+      @include pseudo-elements;
+      top: 0;left: 0;right: 0;bottom: 0;
+      background: url(../img/svg/i-check-white.svg) center no-repeat;
+      transition: all .2s;
+    }
+    &--active:before {
+      opacity: 1;
+    }
+    &--dark {
+      &:before {
+        background: url(../img/svg/i-check-dark.svg) center no-repeat;
+      }
+    }
+  }
+}
+
+// Dimension
+.dimension {
+  gap: 16px;
+  &__item {
+    cursor: pointer;
+    padding: 0 8px;
+    line-height: 32px;
+    border: 1px solid $gray;
+    transition: all .2s;
+    &:hover {
+      color: $white;
+      background: $orange;
+      border-color: $orange;
+    }
+    &--active {
+      border-color: $orange;
+    }
+  }
+}
+
+// Range
+.range {
+  &__input {
+    width: calc(50% - 8px);
+    p {
+      color: $gray;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    input {
+      padding: 0 8px;
+      border: 1px solid $gray;
+      width: 100%;height: 37px;
+    }
+  }
+  &__control {
+    height: 4px;
+    margin-top: 30px;
+    position: relative;
+    background: $gray;
+  }
+  &__btn {
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    background: $orange;
+    width: 32px;height: 32px;
+    border: 2px solid $white;
+    transform: translateY(-50%);
+  }
+  &__line {
+    top: 0;bottom: 0;
+    position: absolute;
+    background: $orange;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .filter {
+    z-index: 101;
+    width: 346px;
+    position: fixed;
+    overflow-y: auto;
+    background: $white;
+    padding: 24px 32px 48px;
+    top: 0;left: 0;bottom: 0;
+    transform: translateX(-100%);
+    transition: ease-in-out .3s;
+    &--open {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .filter {
+    width: 100%;
+    padding: 24px 24px 40px;
+    &__close {
+      margin-bottom: 24px;
+      width: 26px;height: 26px;
+    }
+    &-open {
+      font-size: $fz-16;
+      i {
+        margin-right: 8px;
+        width: 22px;height: 22px;
+      }
+    }
+    &__title {
+      font-size: $fz-24;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: $extra-mob) {
+  .filter {
+    &-open {
+      font-size: $fz-14;
+      i {
+        margin-right: 4px;
+        width: 18px;height: 18px;
+      }
+    }
+  }
+}
